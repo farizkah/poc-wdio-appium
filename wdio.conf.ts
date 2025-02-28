@@ -54,11 +54,14 @@ export const config: WebdriverIO.Config = {
     //
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
-        platformName: 'Android',
-        browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
+        // platformName: 'Android',
+        // browserName: 'Chrome',
+        'appium:app': './app/binary/brocolli.apk',
+        'appium:deviceName': 'android_12_google_api',
+        'appium:platformName': 'Android',
         'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        'appium:automationName': 'UiAutomator2',
+        'appium:appWaitActivity': 'com.flauschcode.broccoli.MainActivity'
     }],
 
     //
